@@ -1,6 +1,6 @@
 # ProjetHC10
 
-📌 Découpage du projet en tâches
+## 📌 Découpage du projet en tâches
 1. Génération de trajectoires (MoveIt + Python)
 
 T1.1 Lire et comprendre l’API Python MoveGroupCommander (MoveIt).
