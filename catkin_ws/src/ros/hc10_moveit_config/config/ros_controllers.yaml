@@ -1,0 +1,33 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+hc10_arm_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - joint_1_s
+    - joint_2_l
+    - joint_3_u
+    - joint_4_r
+    - joint_5_b
+    - joint_6_t
+  state_publish_rate: 25
+  constraints:
+    goal_time: 2.0
+    stopped_velocity_tolerance: 0.05
+  gains:
+    joint_1_s: {p: 100.0, i: 0.01, d: 10.0}
+    joint_2_l: {p: 100.0, i: 0.01, d: 10.0}
+    joint_3_u: {p: 100.0, i: 0.01, d: 10.0}
+    joint_4_r: {p: 50.0,  i: 0.01, d: 5.0}
+    joint_5_b: {p: 30.0,  i: 0.01, d: 3.0}
+    joint_6_t: {p: 20.0,  i: 0.01, d: 2.0}
+
+gazebo_ros_control:
+  pid_gains:
+    joint_1_s: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 1.0}
+    joint_2_l: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 1.0}
+    joint_3_u: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 1.0}
+    joint_4_r: {p: 50.0,  i: 0.01, d: 5.0,  i_clamp: 1.0}
+    joint_5_b: {p: 30.0,  i: 0.01, d: 3.0,  i_clamp: 1.0}
+    joint_6_t: {p: 20.0,  i: 0.01, d: 2.0,  i_clamp: 1.0}
