@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<robot name="motoman_hc10" xmlns:xacro="http://ros.org/wiki/xacro">
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+
+  <xacro:macro name="add_simple_transmission" params="joint_name">
+    <transmission name="${joint_name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${joint_name}_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:add_simple_transmission joint_name="joint_1_s"/>
+  <xacro:add_simple_transmission joint_name="joint_2_l"/>
+  <xacro:add_simple_transmission joint_name="joint_3_u"/>
+  <xacro:add_simple_transmission joint_name="joint_4_r"/>
+  <xacro:add_simple_transmission joint_name="joint_5_b"/>
+  <xacro:add_simple_transmission joint_name="joint_6_t"/>
+</robot>
