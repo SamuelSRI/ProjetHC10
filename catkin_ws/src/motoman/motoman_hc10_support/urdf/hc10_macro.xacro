@@ -173,7 +173,9 @@
       </collision>
     </link>
     <gazebo reference="${prefix}link_6_t">
-      <material>Gazebo/Blue</material>
+      <material>G<axis xyz="0 0 0" rpy="0 0 0"/>
+            <limit effort="10000" velocity="1000"/>
+            <dynamics damping="1.0" friction="1.0"/>zebo/Blue</material>
       <mu1>0.2</mu1>
       <mu2>0.2</mu2>
     </gazebo>
