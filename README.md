@@ -1,6 +1,16 @@
 # ProjetHC10
-[👉 Clique ici](https://tenor.com/fr/view/side-eye-dog-suspicious-look-suspicious-doubt-dog-doubt-gif-23680990)
+Ceci est un travaux réalisés dans le cadre du projet d’intégration du robot collaboratif HC10
 
+## clonage du depot:
+git clone https://github.com/SamuelSRI/ProjetHC10
 
--_-
+## compiler:
+cd ~/catkin_ws
+catkin_make
+
+## sourcer l'environnement:
+source devel/setup.bash
+
+## Lancer Gazebo avec le robot HC
+roslaunch (a remplir)
 
