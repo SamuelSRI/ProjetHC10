@@ -12,5 +12,5 @@ catkin_make
 source devel/setup.bash
 
 ## Lancer Gazebo avec le robot HC
-roslaunch (a remplir)
+roslaunch hc10_moveit_config demo_gazebo.launch
 
